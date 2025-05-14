@@ -8,3 +8,13 @@ jobs:
     steps:
       - name: print something
         run: echo "Hello World";
+      - name: print something
+        run: echo "Hello World 2";
+      - name: print something
+        run: echo "Hello World 3";
+  wait-for-3-min:
+    runs-on: ubuntu-latest
+    steps:
+      - name: wait for 3 min
+        run: sleep 180s
+
