@@ -1,0 +1,27 @@
+name: GitHub Actions Test
+on:
+  workflow_dispatch:
+
+jobs:
+  test-something:
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+      - name: print something
+        run: echo "Hello World";
+      - name: print something
+        run: echo "Hello World 2";
+      - name: print something
+        run: echo "Hello World 3";
+  wait-for-1-min:
+    runs-on: ubuntu-latest
+    steps:
+      - name: wait for 1 min
+        run: sleep 60s
+  run-after-all-done:
+    needs: wait-for-1-min
+    runs-on: ubuntu-latest
+    steps:
+      - name: wait for 5 sec
+        run: sleep 5s
+
