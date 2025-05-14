@@ -1,0 +1,10 @@
+name: GitHub Actions Test
+on:
+  push:
+jobs:
+  test-something:
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+      - name: print something
+        run: echo "Hello World";
