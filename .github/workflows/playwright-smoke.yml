@@ -12,8 +12,10 @@ jobs:
     timeout-minutes: 10
     runs-on: ubuntu-latest
     steps:
-      - uses: echo USERNAME_ONE
-      - uses: echo USERNAME_TWO
+      - name: PRINT USER ONE
+        run:  echo USERNAME_ONE
+      - name: PRINT USER TWO
+        run:  echo USERNAME_TWO
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
       - name: Install dependencies
