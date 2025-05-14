@@ -18,7 +18,7 @@ jobs:
       - name: wait for 1 min
         run: sleep 60s
   run-after-all-done:
-    needs: wait-for-3-min
+    needs: wait-for-1-min
     runs-on: ubuntu-latest
     steps:
       - name: wait for 5 sec
