@@ -1,6 +1,7 @@
 name: GitHub Actions Test
 on:
   workflow_dispatch:
+
 jobs:
   test-something:
     timeout-minutes: 5
